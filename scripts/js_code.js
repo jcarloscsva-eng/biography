@@ -32,14 +32,14 @@
     { file: 'leroymerlin.png',    alt: 'Leroy Merlin' },
     { file: 'scalpers.png',       alt: 'Scalpers' },
     { file: 'unidadeditorial.svg',alt: 'Unidad Editorial' },
-    { file: 'pepsiCo.png',        alt: 'PepsiCo' },
+    { file: 'pepsico.png',        alt: 'PepsiCo' },
     { file: 'metlife.png',        alt: 'MetLife' },
     { file: 'arsenal.png',        alt: 'Arsenal FC' },
     { file: 'avivaireland.png',   alt: 'Aviva Ireland' },
     { file: 'riuhotels.svg',      alt: 'Riu Hotels' },
     { file: 'smartbox.png',       alt: 'Smartbox' },
     { file: 'tradeinn.png',       alt: 'Trade Inn' },
-    { file: 'bigerbrands.png',    alt: 'Tiger Brands' },
+    { file: 'tigerbrands.png',    alt: 'Tiger Brands' },
   ];
 
   function renderLogos(lang) {
