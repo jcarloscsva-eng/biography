@@ -460,7 +460,7 @@
     // 3. CASOS ESPECIALES (Enlaces dinámicos)
     const isEs = lang === 'es';
     const cvUrl = isEs ? 'ES.pdf' : 'EN.pdf';
-    const fullCvUrl = isEs ? 'cv_completo.html' : 'full_cv.html';
+    const fullCvUrl = isEs ? 'JuanCarlos_Castillo_CV_ES.html' : 'JuanCarlos_Castillo_CV_EN.html';
 
     // Actualizar todos los enlaces de descarga de PDF
     const pdfLinks = [document.getElementById('nav-cv-link'), document.querySelector('[data-t="cta-download"]')];
