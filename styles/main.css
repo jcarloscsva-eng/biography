@@ -313,6 +313,16 @@ body.light-mode .lang-float {
     animation: fadeUp 0.8s ease 0.35s forwards;
   }
 
+  .hero-credentials {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: var(--gold);
+    margin-bottom: 24px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.28s forwards;
+  }
+
   .hero-title strong {
     color: var(--text);
     font-weight: 500;
@@ -1256,4 +1266,4 @@ body.light-mode .lang-float {
     margin-top: 15px;
     border-top: 1px solid rgba(201, 168, 76, 0.1);
     padding-top: 15px;
-}
+      }
