@@ -465,13 +465,12 @@
     // Actualizar todos los enlaces de descarga de PDF
     const pdfLinks = [document.getElementById('nav-cv-link'), document.querySelector('[data-t="cta-download"]')];
     pdfLinks.forEach(link => {
-        if (link) link.href = `https://jcastillo.es/cv_pdf/CV_JuanCarlosCastillo_SeniorProjectManager_${cvUrl}`;
+        if (link) link.href = `https://jcastillo.es/cv_pdf/JuanCarlos_Castillo_CV_${cvUrl}`;
     });
 
-    // Enlace "View Full CV": apunta temporalmente al PDF corregido
-    // (los cv_html/ antiguos se regenerarán con las nuevas versiones Senior PM)
+    // Enlace "View Full CV": apunta a la versión HTML del CV (Senior PM)
     const cvBtn = document.querySelector('[data-t="cta-cv"]');
-    if (cvBtn) cvBtn.href = `https://jcastillo.es/cv_pdf/JuanCarlos_Castillo_CV_${cvUrl}`;
+    if (cvBtn) cvBtn.href = `https://jcastillo.es/cv_html/${fullCvUrl}`;
 
     // 4. ESTADOS DE INTERFAZ
     document.getElementById('lang-en').classList.toggle('active', lang === 'en');
