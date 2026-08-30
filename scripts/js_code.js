@@ -465,7 +465,7 @@
     // Actualizar todos los enlaces de descarga de PDF
     const pdfLinks = [document.getElementById('nav-cv-link'), document.querySelector('[data-t="cta-download"]')];
     pdfLinks.forEach(link => {
-        if (link) link.href = `https://jcastillo.es/cv_pdf/JuanCarlos_Castillo_CV_${cvUrl}`;
+        if (link) link.href = `https://jcastillo.es/cv_pdf/CV_JuanCarlosCastillo_SeniorProjectManager_${cvUrl}`;
     });
 
     // Enlace "View Full CV": apunta a la versión HTML del CV (Senior PM)
