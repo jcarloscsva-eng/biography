@@ -315,3 +315,25 @@ footer{
   .scroll-hint{display:none}
 }
 @media (prefers-reduced-motion:reduce){*{animation:none !important;scroll-behavior:auto}}
+
+/* ===================== RECOMMENDATION CARDS ===================== */
+.rec-card{
+  background:var(--bg2);
+  border:1px solid var(--line);
+  border-radius:2px;
+  padding:26px 24px 22px;
+  display:flex;flex-direction:column;justify-content:space-between;gap:20px;
+  transition:border-color .2s ease,background .2s ease;
+}
+.rec-card:hover{border-color:var(--gold-dim);background:var(--bg3)}
+.rec-quote{
+  margin:0;font-size:14.5px;line-height:1.62;color:var(--text);
+}
+.rec-author-info{display:flex;flex-direction:column;gap:2px;border-top:1px solid var(--line);padding-top:14px}
+.rec-author-name{font-family:var(--sans);font-weight:600;font-size:14px;color:var(--white)}
+.rec-author-job{font-family:var(--mono);font-size:11.5px;letter-spacing:0.02em;color:var(--muted)}
+.rec-translated{
+  display:inline-block;margin-top:6px;
+  font-family:var(--mono);font-size:10.5px;letter-spacing:0.04em;text-transform:uppercase;
+  color:var(--muted);opacity:.75;
+}
