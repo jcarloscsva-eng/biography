@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Juan Carlos Castillo — Senior Project Manager (CV)</title>
+<meta name="description" content="Senior Project Manager, PMP — 15 años entregando proyectos de SaaS enterprise y tecnología en EMEA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FBFBF9;
+    --ink:#1A1D24;
+    --slate:#2A4D69;
+    --copper:#B87333;
+    --muted:#6B7280;
+    --line:#E4E2DB;
+    --line-strong:#CFCcC4;
+    --card:#FFFFFF;
+    --sans:'Space Grotesk',system-ui,sans-serif;
+    --serif:'Newsreader',Georgia,serif;
+    --mono:'JetBrains Mono',ui-monospace,monospace;
+    --maxw:920px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    padding:0 20px;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:80px 0 96px}
+
+  /* ---------- header ---------- */
+  .hd{
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:32px;
+    align-items:end;
+    padding-bottom:28px;
+    border-bottom:2px solid var(--ink);
+  }
+  .hd-name{
+    font-family:var(--sans);
+    font-weight:700;
+    font-size:clamp(38px,6vw,60px);
+    line-height:0.98;
+    letter-spacing:-0.02em;
+  }
+  .hd-name .last{color:var(--slate)}
+  .hd-role{
+    font-family:var(--mono);
+    font-size:13px;
+    font-weight:500;
+    letter-spacing:0.02em;
+    color:var(--copper);
+    margin-top:14px;
+    text-transform:uppercase;
+  }
+  .hd-tag{
+    font-family:var(--sans);
+    font-size:14.5px;
+    color:var(--muted);
+    margin-top:8px;
+    font-weight:400;
+  }
+  .hd-right{
+    text-align:right;
+    font-family:var(--mono);
+    font-size:12px;
+    line-height:1.9;
+    color:var(--ink);
+    white-space:nowrap;
+  }
+  .hd-right a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line-strong)}
+  .hd-right a:hover{color:var(--copper);border-color:var(--copper)}
+  .hd-loc{
+    font-family:var(--mono);
+    font-size:11.5px;
+    color:var(--muted);
+    margin-top:16px;
+    letter-spacing:0.01em;
+  }
+  .hd-loc .pin{color:var(--copper)}
+
+  /* ---------- section frame ---------- */
+  .sec{
+    display:grid;
+    grid-template-columns:64px 1fr;
+    gap:0;
+    padding-top:44px;
+  }
+  .sec-rail{
+    position:relative;
+  }
+  .sec-num{
+    font-family:var(--mono);
+    font-size:11px;
+    font-weight:600;
+    color:var(--copper);
+    letter-spacing:0.05em;
+  }
+  .sec-title{
+    font-family:var(--sans);
+    font-weight:600;
+    font-size:12px;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    color:var(--ink);
+    padding-bottom:18px;
+    border-bottom:1px solid var(--line);
+    margin-bottom:22px;
+  }
+  .sec-body{min-width:0}
+
+  /* ---------- summary ---------- */
+  .summary{
+    font-size:17px;
+    line-height:1.68;
+    color:#2b2f38;
+  }
+  .summary strong{
+    font-weight:600;
+    color:var(--ink);
+    background:linear-gradient(transparent 62%, rgba(184,115,51,0.16) 62%);
+  }
+
+  /* ---------- competencies ---------- */
+  .tags{display:flex;flex-wrap:wrap;gap:8px}
+  .tag{
+    font-family:var(--sans);
+    font-size:12.5px;
+    font-weight:500;
+    color:var(--slate);
+    background:#F1F0EB;
+    border:1px solid var(--line);
+    border-radius:2px;
+    padding:5px 10px;
+    line-height:1.3;
+  }
+
+  /* ---------- tools ---------- */
+  .tool-row{
+    display:grid;
+    grid-template-columns:150px 1fr;
+    gap:16px;
+    padding:11px 0;
+    border-bottom:1px dotted var(--line-strong);
+  }
+  .tool-row:last-child{border-bottom:none}
+  .tool-k{
+    font-family:var(--sans);
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+    color:var(--ink);
+    padding-top:2px;
+  }
+  .tool-v{font-family:var(--mono);font-size:12.5px;color:#3a3f48;line-height:1.7}
+
+  /* ---------- experience ---------- */
+  .job{
+    position:relative;
+    padding:0 0 32px 24px;
+    border-left:2px solid var(--line);
+    margin-left:2px;
+  }
+  .job:last-child{padding-bottom:4px}
+  .job::before{
+    content:'';
+    position:absolute;
+    left:-6px;top:6px;
+    width:10px;height:10px;
+    border-radius:50%;
+    background:var(--paper);
+    border:2px solid var(--slate);
+  }
+  .job.lead::before{background:var(--copper);border-color:var(--copper)}
+  .job-role{
+    font-family:var(--sans);
+    font-weight:600;
+    font-size:17px;
+    letter-spacing:-0.01em;
+    line-height:1.25;
+  }
+  .job-meta{
+    font-family:var(--mono);
+    font-size:11.5px;
+    color:var(--muted);
+    margin-top:5px;
+    letter-spacing:0.01em;
+  }
+  .job-meta .co{color:var(--slate);font-weight:500}
+  .job-ctx{
+    font-size:15px;
+    color:#3a3f48;
+    margin:12px 0 14px;
+    line-height:1.6;
+  }
+  ul.bul{list-style:none;display:flex;flex-direction:column;gap:8px}
+  ul.bul li{
+    position:relative;
+    padding-left:20px;
+    font-size:14.5px;
+    line-height:1.55;
+    color:#2b2f38;
+  }
+  ul.bul li::before{
+    content:'';
+    position:absolute;
+    left:2px;top:9px;
+    width:5px;height:5px;
+    background:var(--copper);
+    transform:rotate(45deg);
+  }
+  ul.bul li.clients{color:var(--muted);font-family:var(--sans);font-size:12.5px;padding-top:2px}
+  ul.bul li.clients::before{background:var(--line-strong)}
+  .metric{
+    font-family:var(--mono);
+    font-weight:600;
+    color:var(--slate);
+    background:rgba(42,77,105,0.07);
+    padding:0 4px;
+    border-radius:2px;
+    white-space:nowrap;
+  }
+
+  /* ---------- education / awards ---------- */
+  .stack{display:flex;flex-direction:column;gap:14px}
+  .item{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:baseline}
+  .item-main{font-size:15px;line-height:1.45}
+  .item-main .t{font-family:var(--sans);font-weight:600;font-size:14.5px}
+  .item-main .s{color:var(--muted);font-size:13.5px}
+  .item-date{
+    font-family:var(--mono);
+    font-size:11.5px;
+    color:var(--copper);
+    white-space:nowrap;
+  }
+
+  /* ---------- languages ---------- */
+  .langs{display:flex;gap:40px;flex-wrap:wrap}
+  .lang .l-name{font-family:var(--sans);font-weight:600;font-size:15px}
+  .lang .l-lvl{font-family:var(--mono);font-size:12px;color:var(--muted);margin-top:3px}
+
+  /* ---------- footer ---------- */
+  .foot{
+    margin-top:56px;
+    padding-top:22px;
+    border-top:1px solid var(--line);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:12px;
+    font-family:var(--mono);
+    font-size:11px;
+    color:var(--muted);
+  }
+  .foot a{color:var(--slate);text-decoration:none}
+  .foot a:hover{color:var(--copper)}
+
+  /* ---------- lang switch ---------- */
+  .switch{
+    position:fixed;top:20px;right:20px;z-index:10;
+    display:flex;gap:2px;
+    background:var(--card);
+    border:1px solid var(--line-strong);
+    border-radius:3px;
+    padding:3px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.05);
+    font-family:var(--mono);font-size:11px;font-weight:600;
+  }
+  .switch a{
+    padding:5px 11px;border-radius:2px;text-decoration:none;color:var(--muted);
+  }
+  .switch a.on{background:var(--ink);color:var(--paper)}
+
+  /* ---------- reveal (degrades to visible if JS/observer absent) ---------- */
+  .sec.pre{opacity:0;transform:translateY(14px)}
+  .sec{transition:opacity .6s ease,transform .6s ease}
+  .sec.vis{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.sec.pre{opacity:1;transform:none}.sec{transition:none}}
+
+  /* ---------- responsive ---------- */
+  @media(max-width:680px){
+    body{padding:0 16px}
+    .wrap{padding:40px 0 64px}
+    .hd{grid-template-columns:1fr;align-items:start;gap:18px}
+    .hd-right{text-align:left;white-space:normal}
+    .hd-loc{white-space:normal}
+    .sec{grid-template-columns:1fr;gap:0}
+    .sec-rail{display:flex;gap:10px;align-items:baseline;margin-bottom:6px}
+    .sec-title{border:none;padding-bottom:0;margin-bottom:16px}
+    .sec-num::after{content:' /';color:var(--line-strong)}
+    .tool-row{grid-template-columns:1fr;gap:3px}
+    .item{grid-template-columns:1fr}
+    .item-date{margin-top:2px}
+  }
+</style>
+</head>
+<body>
+
+<nav class="switch" aria-label="Language">
+  <a href="JuanCarlos_Castillo_CV_EN.html">EN</a>
+  <a href="JuanCarlos_Castillo_CV_ES.html" class="on">ES</a>
+</nav>
+
+<div class="wrap">
+
+  <header class="hd">
+    <div>
+      <h1 class="hd-name">Juan Carlos <span class="last">Castillo</span></h1>
+      <div class="hd-role">Senior Project Manager · PMP®</div>
+      <div class="hd-tag">SaaS Enterprise · Entrega Tecnológica · Gobernanza y Riesgos · EMEA</div>
+      <div class="hd-loc"><span class="pin">◆</span> Valladolid, España — disponible para trabajo híbrido en Madrid, abierto a remoto en EMEA</div>
+    </div>
+    <div class="hd-right">
+      <a href="tel:+34605794255">+34 605 794 255</a><br>
+      <a href="mailto:jcarloscsva@gmail.com">jcarloscsva@gmail.com</a><br>
+      <a href="https://linkedin.com/in/JCarlosCS" target="_blank" rel="noopener">linkedin.com/in/JCarlosCS</a><br>
+      <a href="https://jcastillo.es" target="_blank" rel="noopener">jcastillo.es</a>
+    </div>
+  </header>
+
+  <!-- SUMMARY -->
+  <section class="sec">
+    <div class="sec-rail"><div class="sec-num">01</div></div>
+    <div class="sec-body">
+      <div class="sec-title">Perfil Profesional</div>
+      <p class="summary">Senior Project Manager con <strong>15 años</strong> de experiencia entregando proyectos complejos de SaaS enterprise y tecnología en EMEA. Lidera proyectos de alto riesgo y múltiples workstreams de principio a fin, cubriendo planificación, alcance, calendario, presupuesto, recursos, riesgos y control de cambios. Con experiencia en gobernanza de proyectos, gestión de stakeholders ejecutivos, liderazgo multifuncional y reporting de entrega en organizaciones internacionales. Combina un liderazgo sólido de proyectos con una base técnica, trabajando directamente con solution architects, data engineers y equipos de producto para traducir requisitos de negocio complejos en planes de entrega ejecutables. Historial demostrado de recuperar proyectos complejos, <strong>reduciendo los sobrecostes un 40%</strong> y <strong>comprimiendo los plazos un 43%</strong> mediante un mayor control de cambios y gobernanza de entrega. Certificado PMP, con el inglés como idioma de trabajo habitual en compromisos internacionales.</p>
+    </div>
+  </section>
+
+  <!-- COMPETENCIES -->
+  <section class="sec">
+    <div class="sec-rail"><div class="sec-num">02</div></div>
+    <div class="sec-body">
+      <div class="sec-title">Competencias Clave</div>
+      <div class="tags">
+        <span class="tag">Entrega de Proyectos End-to-End</span>
+        <span class="tag">Gobernanza de Proyectos</span>
+        <span class="tag">Gestión de Stakeholders Ejecutivos</span>
+        <span class="tag">Gestión de Riesgos e Incidencias</span>
+        <span class="tag">Control Financiero y Presupuestario</span>
+        <span class="tag">Control de Cambios</span>
+        <span class="tag">Entrega Multi-Workstream</span>
+        <span class="tag">Gestión de Alcance y Dependencias</span>
+        <span class="tag">Liderazgo Multifuncional</span>
+        <span class="tag">Implementación de SaaS Enterprise</span>
+        <span class="tag">Agile y Waterfall</span>
+        <span class="tag">Gestión de Relación con Cliente</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOOLS -->
+  <section class="sec">
+    <div class="sec-rail"><div class="sec-num">03</div></div>
+    <div class="sec-body">
+      <div class="sec-title">Herramientas y Stack Tecnológico</div>
+      <div class="tool-row"><div class="tool-k">Gestión proyectos</div><div class="tool-v">Jira · Confluence · MS Project · Smartsheet · Airtable · Microsoft Teams · SharePoint</div></div>
+      <div class="tool-row"><div class="tool-k">Automatización e IA</div><div class="tool-v">n8n · Make · Automatización asistida por LLM · Integraciones API</div></div>
+      <div class="tool-row"><div class="tool-k">Datos e Integración</div><div class="tool-v">SQL · APIs REST · Integración de Datos · ETL · Alteryx · Data Warehousing</div></div>
+      <div class="tool-row"><div class="tool-k">Metodologías</div><div class="tool-v">Agile (Scrum, Kanban, SAFe) · Waterfall · PMBOK · Prince2 (conceptual) · Gestión de RAID</div></div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="sec">
+    <div class="sec-rail"><div class="sec-num">04</div></div>
+    <div class="sec-body">
+      <div class="sec-title">Experiencia Profesional</div>
+
+      <div class="job lead">
+        <div class="job-role">Lead Project Manager, EMEA — SaaS Enterprise y Entrega Tecnológica</div>
+        <div class="job-meta"><span class="co">Cheetah Digital by Marigold</span> · Madrid · Ene 2022 – Feb 2026</div>
+        <p class="job-ctx">Lideró proyectos de SaaS enterprise de alto riesgo y múltiples workstreams en EMEA, con responsabilidad sobre los resultados de entrega, el rendimiento presupuestario y las relaciones con stakeholders ejecutivos.</p>
+        <ul class="bul">
+          <li>Redujo los sobrecostes un <span class="metric">40%</span> y comprimió los plazos un <span class="metric">43%</span> en una cuenta clave mediante disciplina de control de cambios y una gobernanza de entrega más sólida.</li>
+          <li>Aumentó la satisfacción del cliente un <span class="metric">35%</span> en PepsiCo y un <span class="metric">50%</span> en Smartbox Trade estabilizando la entrega y gestionando las expectativas de los stakeholders de forma proactiva.</li>
+          <li>Gestionó alcance, riesgos y financials en proyectos simultáneos, con vías de escalado claras hacia los sponsors ejecutivos.</li>
+          <li>Automatizó flujos de trabajo recurrentes de PM con n8n, Make y Airtable, y aplicó LLMs al análisis de riesgos y al reporting — ahorrando <span class="metric">3–4 h/semana</span>.</li>
+          <li>Mentorizó a project managers e impulsó la mejora continua en el equipo de entrega EMEA.</li>
+          <li class="clients">Clientes — PepsiCo, Smartbox Trade, Hiscox, Arsenal FC, Aviva Ireland, The White Company, Reach PLC, Kraft Heinz</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-role">Senior Project Manager, EMEA — SaaS Enterprise y Entrega Tecnológica</div>
+        <div class="job-meta"><span class="co">Cheetah Digital by Marigold</span> · Madrid · Jul 2019 – Ene 2022</div>
+        <p class="job-ctx">Entregó proyectos de SaaS enterprise de principio a fin en EMEA como punto de contacto principal del cliente, coordinando equipos multifuncionales y stakeholders en varios países y husos horarios.</p>
+        <ul class="bul">
+          <li>Gestionó el ciclo de vida completo del proyecto, desde el discovery hasta el despliegue y la estabilización post-lanzamiento.</li>
+          <li>Dirigió talleres de requisitos, traduciendo necesidades de negocio en configuración de plataforma y planes de entrega.</li>
+          <li>Colaboró con solution architects y customer success para impulsar la adopción y la preparación operativa.</li>
+          <li class="clients">Clientes — Tiger Brands (Sudáfrica), TradeInn, Riu Hotels, MetLife España y Portugal, Idealista, Leroy Merlin, Thomas Sanderson</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-role">Senior Manager, Onboarding e Implementación de Clientes</div>
+        <div class="job-meta"><span class="co">Cheetah Digital by Marigold</span> · Madrid · Sep 2016 – Jul 2019</div>
+        <p class="job-ctx">Co-construyó la función de onboarding e implementación de clientes en España junto al Country Delivery Manager, definiendo procesos de entrega y liderando un equipo de Solution y Technical Architects.</p>
+        <ul class="bul">
+          <li>Redujo el sobrecoste del <span class="metric">~150% al ~105%</span> y el plazo medio de <span class="metric">7 a 4 meses</span> mediante una requirements matrix y un framework de control de cambios.</li>
+          <li>Contribuyó a estándares de entrega y frameworks de implementación adoptados después en toda la organización EMEA.</li>
+          <li>Diseñó flujos de onboarding, frameworks de reporting y KPIs de rendimiento usados en todo el equipo.</li>
+          <li class="clients">Clientes — Prensa Ibérica, Riu Hotels, Real Madrid, Emailing Networks</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-role">Technical Project Manager</div>
+        <div class="job-meta"><span class="co">Experian Marketing Services</span> · Madrid · Dic 2013 – Sep 2016</div>
+        <p class="job-ctx">Entregó implementaciones de plataforma SaaS y MarTech de principio a fin, coordinando data engineers, solution architects y technical architects en todos los workstreams.</p>
+        <ul class="bul">
+          <li>Gestionó presupuestos y plazos de builds de Single Customer View, incluyendo limpieza y enriquecimiento de datos.</li>
+          <li>Redujo el tiempo de tareas operativas un <span class="metric">25%</span> y el tiempo de generación de informes un <span class="metric">50%</span> mediante automatización.</li>
+          <li>Aportó definición técnica del alcance en preventa para nuevas oportunidades.</li>
+          <li class="clients">Clientes — Unidad Editorial, Leroy Merlin, Idealista, AON, Cortefiel, Grupo Inditex</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-role">Technical Account Executive</div>
+        <div class="job-meta"><span class="co">Experian Marketing Services</span> · Madrid · Ago 2011 – Dic 2013</div>
+        <ul class="bul">
+          <li>Gestionó más de 50 cuentas enterprise en finanzas, retail y telecomunicaciones.</li>
+          <li>Coordinó la entrega de campañas cross-channel y los requisitos técnicos del cliente.</li>
+          <li>Apoyó la preventa técnica para Vodafone, Banco Santander, Decathlon y Estée Lauder.</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="sec">
+    <div class="sec-rail"><div class="sec-num">05</div></div>
+    <div class="sec-body">
+      <div class="sec-title">Formación y Certificaciones</div>
+      <div class="stack">
+        <div class="item"><div class="item-main"><span class="t">Project Management Professional (PMP®)</span> <span class="s">— Project Management Institute</span></div><div class="item-date">Jul 2026</div></div>
+        <div class="item"><div class="item-main"><span class="t">Google Project Management Certificate</span> <span class="s">— Google</span></div><div class="item-date">Feb 2026</div></div>
+        <div class="item"><div class="item-main"><span class="t">Agile Project Management</span> <span class="s">— Google</span></div><div class="item-date">Mar 2026</div></div>
+        <div class="item"><div class="item-main"><span class="t">HND en Ciencias de la Computación — Ingeniería del Software</span> <span class="s">— Edexcel (programa Universidad SEK, Newcastle)</span></div><div class="item-date">2006–2010</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AWARDS -->
+  <section class="sec">
+    <div class="sec-rail"><div class="sec-num">06</div></div>
+    <div class="sec-body">
+      <div class="sec-title">Reconocimientos</div>
+      <div class="stack">
+        <div class="item"><div class="item-main"><span class="t">Cheetah Digital Excellence Award</span> <span class="s">— Reconocimiento EMEA por la entrega a clientes</span></div><div class="item-date">2018</div></div>
+        <div class="item"><div class="item-main"><span class="t">Individual Marketing Forward Award</span> <span class="s">— Reconocimiento EMEA por la entrega</span></div><div class="item-date">2016</div></div>
+        <div class="item"><div class="item-main"><span class="t">Individual Marketing Forward Award</span> <span class="s">— Top performer, España</span></div><div class="item-date">2013</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LANGUAGES -->
+  <section class="sec">
+    <div class="sec-rail"><div class="sec-num">07</div></div>
+    <div class="sec-body">
+      <div class="sec-title">Idiomas</div>
+      <div class="langs">
+        <div class="lang"><div class="l-name">Español</div><div class="l-lvl">Nativo</div></div>
+        <div class="lang"><div class="l-name">Inglés</div><div class="l-lvl">C1 · idioma de trabajo habitual, EMEA</div></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <div>Juan Carlos Castillo · Senior Project Manager · PMP®</div>
+    <div><a href="https://jcastillo.es">jcastillo.es</a> · <a href="mailto:jcarloscsva@gmail.com">Contactar</a></div>
+  </footer>
+
+</div>
+
+<script>
+  (function(){
+    var secs=document.querySelectorAll('.sec');
+    if(!('IntersectionObserver' in window)){return;}
+    secs.forEach(function(s){s.classList.add('pre');});
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target);}});},{threshold:0.06,rootMargin:'0px 0px -30px 0px'});
+    secs.forEach(function(s){io.observe(s);});
+    // safety: reveal everything after 2.5s no matter what
+    setTimeout(function(){secs.forEach(function(s){s.classList.add('vis');});},300);
+  })();
+</script>
+</body>
+</html>
