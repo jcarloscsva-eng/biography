@@ -276,7 +276,7 @@
       "cta-linkedin": "View all on LinkedIn",
       "rec-jerome":    "\"He was highly appreciated by both clients and colleagues for being approachable, available, and always willing to go the extra mile to ensure satisfaction.\"",
       "rec-siba":      "\"He is also technically knowledgeable, which helps him understand project challenges and support teams in moving forward. He brings structure to complex situations and keeps delivery on track.\"",
-      "rec-oscar":     "\"Su perfil destaca por una combinación muy valiosa de versatilidad, capacidad de adaptación y orientación a la coordinación de personas y objetivos, lo que le permite desenvolverse con soltura en distintos contextos, culturas y modelos de trabajo.\"",
+      "rec-oscar":     "\"His profile stands out for a highly valuable combination of versatility, adaptability, and a focus on coordinating people and objectives, which allows him to operate with ease across different contexts, cultures, and ways of working.\" <span class=\"rec-translated\">(Translated from Spanish)</span>",
       "rec-joffrey":   "\"Juan is a professional and an effective project/program manager — always available to help and always happy to take on new challenges.\"",
       "rec-javier":    "\"There are professionals who execute and those who transform; Juan Carlos undoubtedly belongs to the latter. He has an almost instinctive ability to read complex situations and turn them into improvement opportunities.\"",
       "rec-francisco": "\"His attitude, commitment and results-orientation make him a very valuable professional for any organisation.\"",
